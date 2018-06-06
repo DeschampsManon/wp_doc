@@ -1,0 +1,15 @@
+.single-news {
+  border-bottom: 1px solid #8080801a;
+}
+
+.single-news:last-child {
+  border-bottom: unset;
+}
+
+.iffalse{
+    background: #CC0000 !important;
+}
+
+.iftrue{
+    background: #00C851 !important;
+}

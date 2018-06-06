@@ -1,0 +1,104 @@
+.top-nav-collapse {
+  background-color: #82b1ff !important;
+}
+
+.navbar:not(.top-nav-collapse) {
+  background: #181c1f !important;
+}
+
+@media (max-width: 768px) {
+  .navbar:not(.top-nav-collapse) {
+    background: #82b1ff !important;
+  }
+}
+
+h5 {
+  letter-spacing: 3px;
+}
+
+@media (max-width: 740px) {
+  .full-height,
+  .full-height body,
+  .full-height header,
+  .full-height header .view {
+    height: 700px;
+  }
+}
+
+#rocket_dummy {
+  position: absolute;
+  left: 2%;
+  top: 28%;
+  width: 55px;
+  height: 55px;
+  z-index: 30;
+}
+
+#rocket_mobile {
+  position: absolute;
+  top: 0;
+  margin: 85px 0 0 -4px;
+  width: 60px;
+  height: 185px;
+}
+
+#rocket_mobile.fixed {
+  position: fixed;
+  top: 0;
+}
+
+#rocket_mobile .rocket_body {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  top: 63px;
+  left: 0;
+  background: url('../../assets/rocket-sprite.png') 0 -28px no-repeat;
+
+}
+
+#rocket_mobile .fire {
+  position: absolute;
+  width: 35px;
+  height: 78px;
+}
+
+#rocket_mobile .fire.top {
+  left: 13px;
+  top: 3px;
+  background: url('../../assets/rocket-sprite.png') -60px 0 no-repeat;
+
+
+}
+
+#rocket_mobile .fire.top.on {
+  background-position: -95px 0;
+}
+
+#rocket_mobile .fire.bottom {
+  left: 13px;
+  top: 104px;
+  background: url('../../assets/rocket-sprite.png') -60px -78px no-repeat;
+
+}
+
+#rocket_mobile .fire.bottom.on {
+  background-position: -95px -78px;
+}
+
+#rocket_mobile {
+  position: absolute;
+  top: 0;
+  margin: 85px 0 0 -4px;
+  width: 60px;
+  height: 185px;
+}
+
+#rocket_mobile.fixed {
+  position: fixed;
+  top: 0;
+}
+
+.top-nav-collapse[_ngcontent-c1] {
+  background-color: #2E2E2E !important;
+}

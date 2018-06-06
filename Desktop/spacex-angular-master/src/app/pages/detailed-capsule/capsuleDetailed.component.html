@@ -1,0 +1,149 @@
+<main>
+  <div class="container">
+
+    <!-- Section: Magazine v.2 -->
+    <section class="magazine-section my-5">
+
+      <!-- Section heading -->
+      <h2 class="h1-responsive font-weight-bold text-center my-5">Detailed of ours capsules</h2>
+      <!-- Section description -->
+      <p class="text-center dark-grey-text w-responsive mx-auto mb-5">
+        You can find here any details of ours capsules like mission, date of launches or activities.
+      </p>
+
+      <!-- Grid row -->
+      <div class="row animated fadeInDown" *ngFor="let capsule of capsulesDetails | paginate: { itemsPerPage: 3, currentPage: p }">
+
+        <!-- Grid column -->
+        <div class="col-lg-6 col-md-12">
+
+          <!-- Featured news -->
+          <div class="single-news mb-lg-0 mb-4">
+
+            <!-- Image -->
+            <div class="view overlay rounded z-depth-1-half mb-4">
+              <img class="img-fluid" src="assets/capsuladata.png">
+              <a>
+                <div class="mask rgba-white-slight"></div>
+              </a>
+            </div>
+
+            <!-- Data -->
+            <div class="news-data d-flex justify-content-between">
+              <a class="deep-orange-text">
+                <h6 class="font-weight-bold">
+                  <i class="fa fa-space-shuttle pr-2"></i>Capsule</h6>
+              </a>
+              <p class="font-weight-bold dark-grey-text">
+                <i class="fa fa-clock-o pr-2"></i>Launch : {{ capsule.original_launch }}</p>
+            </div>
+
+            <!-- Excerpt -->
+            <h3 class="font-weight-bold dark-grey-text mb-3">
+              <a>Capsule Serial : {{ capsule.capsule_serial }}</a>
+            </h3>
+            <span class="badge badge-pill blue" style="margin-bottom: 3%;font-size:16px;">
+              {{ capsule.capsule_id }}
+            </span>
+            <p class="dark-grey-text mb-lg-0 mb-md-5 mb-4">
+              {{ capsule.details }}
+            </p>
+
+          </div>
+          <!-- Featured news -->
+
+        </div>
+        <div class="col-lg-6 col-md-12">
+
+          <!-- Small news -->
+          <div class="single-news">
+            <!-- Grid row -->
+            <div class="row">
+              <div class="col-md-9">
+                <p class="font-weight-bold dark-grey-text">Missions Complete</p>
+                <div class="d-flex justify-content-between">
+                  <div class="col-11 text-truncate pl-0 mb-3" *ngFor="let mission of capsule.missions">
+                    <a class="dark-grey-text">
+                      {{ mission }}
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Grid row -->
+
+          </div>
+          <!-- Small news -->
+
+          <!-- Small news -->
+          <div class="single-news">
+            <div class="row">
+              <div class="col-md-9">
+                <p class="font-weight-bold dark-grey-text">Landings</p>
+                <div class="d-flex justify-content-between">
+                  <div class="col-11 text-truncate pl-0 mb-3">
+                    <a class="dark-grey-text">
+                      <span class="badge badge-pill green">{{ capsule.landings }}</span>
+                    </a>
+                  </div>
+                </div>
+
+              </div>
+              <!-- Grid column -->
+
+            </div>
+            <!-- Grid row -->
+
+          </div>
+          <!-- Small news -->
+
+          <!-- Small news -->
+          <div class="single-news">
+
+            <!-- Grid row -->
+            <div class="row">
+              <div class="col-md-9">
+                <p class="font-weight-bold dark-grey-text">Type</p>
+                <div class="d-flex justify-content-between">
+                  <div class="col-11 text-truncate pl-0 mb-3">
+                    <a class="dark-grey-text">
+                      {{ capsule.type }}
+                    </a>
+                  </div>
+                </div>
+
+              </div>
+              <!-- Grid column -->
+
+            </div>
+            <!-- Grid row -->
+
+          </div>
+          <!-- Small news -->
+
+          <!-- Small news -->
+          <div class="single-news {{ capsule.status }}">
+            <div class="row">
+              <div class="col-md-9">
+                <p class="font-weight-bold dark-grey-text">Status</p>
+                <div class="d-flex justify-content-between">
+                  <div class="col-11 text-truncate pl-0 mb-lg-3">
+                    <a class="dark-grey-text">
+                      {{ capsule.status }}
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <hr class="my-5">
+      </div>
+
+    </section>
+      <div class="text-center">
+        <pagination-controls (pageChange)="p = $event"></pagination-controls>
+      </div>
+  </div>
+</main>

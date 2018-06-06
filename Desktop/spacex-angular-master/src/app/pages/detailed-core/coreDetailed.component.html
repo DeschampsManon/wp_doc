@@ -1,0 +1,49 @@
+<main>
+  <div class="container">
+    <section class="my-5">
+      <!-- Section heading -->
+      <h2 class="h1-responsive font-weight-bold text-center my-5">Ours differents cores</h2>
+      <!-- Section description -->
+      <p class="grey-text text-center w-responsive mx-auto mb-5">
+        If you need to know something else about our cores, just click on the button to access to his details.
+      </p>
+
+      <!-- Grid row -->
+      <div class="row">
+          <div class="col-md-4 dis" *ngFor="let core of coresDetails  | paginate: { itemsPerPage: 6, currentPage: p }">
+            <div class="card card-cascade wider" >
+                <div class="view gradient-card-header blue-gradient text-center">
+                  <h2 class="card-header-title mb-3">{{ core.core_serial }}</h2>
+                  <p class="mb-0" >
+                    
+                      Status : <span class="badge badge-pill {{ core.status }}">{{ core.status }}</span> <br>
+                      <i class="fa fa-calendar"></i> {{ core.original_launch}}<br>
+                      
+                      
+                      
+                  </p>
+                </div>
+                <div class="card-body text-center">
+                  <p class="card-text">
+                    <span style="width:100%"></span>
+                    {{ core.details }}
+                    <br /><br />
+                    Missions : <br />
+                    <span  *ngFor="let missions of core.missions;">
+                      {{ missions }}
+                    </span>
+                    
+
+                  </p>
+                  
+                </div>
+            </div>
+          </div>
+        </div>
+        </section>
+        <div class="text-center">
+          <pagination-controls (pageChange)="p = $event"></pagination-controls>
+        </div>
+      </div>
+    </main>
+    

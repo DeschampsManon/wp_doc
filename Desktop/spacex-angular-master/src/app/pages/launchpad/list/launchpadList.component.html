@@ -1,0 +1,164 @@
+<!--Card-->
+<!-- <div class="card" *ngFor="let launchpad of launchpads">
+  
+  <div class="card-body">
+
+    <h4 class="card-title"><a routerLink="/launchpad/{{launchpad.id}}">{{ launchpad.full_name }}</a></h4>
+
+    <p class="card-text">{{ launchpad.details }}</p>
+    <a class="btn btn-primary waves-light" mdbWavesEffect>Button</a>
+  </div>
+</div> -->
+<!--/.Card-->
+<main>
+  <div class="container">
+    <section class="magazine-section my-5">
+    
+      <!-- Section heading -->
+      <h2 class="h1-responsive font-weight-bold text-center my-5">List of launchpads</h2>
+      <!-- Section description -->
+      <p class="text-center dark-grey-text w-responsive mx-auto mb-5">
+        Discover our launchpads
+      </p>
+    
+      <!-- Grid row -->
+      <div class="row pad">
+    
+        <!-- Grid column -->
+        <div class="col-lg-6 col-md-12" *ngFor="let launchpad of launchpads | paginate: { itemsPerPage: 2, currentPage: p }">
+    
+          <!-- Featured news -->
+          <div class="single-news mb-4">
+    
+            <!-- Image -->
+            <div class="view overlay rounded z-depth-1-half mb-4">
+              <img class="img-fluid" src="assets/launchpad.png" alt="Sample image">
+              <a>
+                <div class="mask rgba-white-slight"></div>
+              </a>
+            </div>
+    
+            <!-- Data -->
+            <div class="news-data d-flex justify-content-between">
+              <a href="#!" class="light-blue-text">
+                <h6 class="font-weight-bold">
+                  <i class="fa fa-rocket pr-2"></i>Launchpad</h6>
+              </a>
+              <p class="font-weight-bold dark-grey-text">
+                <span class="badge badge-pill {{ launchpad.status }}">{{ launchpad.status }}</span>
+              </p>
+            </div>
+    
+            <!-- Excerpt -->
+            <h3 class="font-weight-bold dark-grey-text mb-3">
+              <a>{{ launchpad.full_name }}</a>
+            </h3>
+            <p class="dark-grey-text">
+               {{ launchpad.details }}
+            </p>
+    
+          </div>
+          <!-- Featured news -->
+    
+          <!-- Small news -->
+          <div class="single-news">
+    
+            <!-- Grid row -->
+            <div class="row">
+
+              <!-- Grid column -->
+              <div class="col-md-9">
+    
+                <!-- Excerpt -->
+                <p class="font-weight-bold dark-grey-text">Location</p>
+                <div class="d-flex justify-content-between">
+                  <div class="col-11 text-truncate pl-0 mb-3">
+                    <a href="#!" class="dark-grey-text">
+                      {{ launchpad.location.name }}
+                    </a><br>
+                    <a href="#!" class="dark-grey-text">
+                      {{ launchpad.location.region }}
+                    </a>
+                  </div>
+                </div>
+    
+              </div>
+              <!-- Grid column -->
+    
+            </div>
+            <!-- Grid row -->
+    
+          </div>
+          <!-- Small news -->
+    
+          <!-- Small news -->
+          <div class="single-news">
+    
+            <!-- Grid row -->
+            <div class="row">
+
+              <!-- Grid column -->
+              <div class="col-md-9">
+    
+                <!-- Excerpt -->
+                <p class="font-weight-bold dark-grey-text">Maps Data</p>
+                <div class="d-flex justify-content-between">
+                  <div class="col-11 text-truncate pl-0 mb-3">
+                    Latitude :
+                    <a href="#!" class="dark-grey-text">
+                      <span class="badge indigo darken-2">{{ launchpad.location.latitude }}</span>
+                    </a><br>
+                    Longitude :
+                    <a href="#!" class="dark-grey-text">
+                      <span class="badge indigo darken-2">{{ launchpad.location.longitude }}</span>
+                    </a>
+                  </div>
+                </div>
+    
+              </div>
+              <!-- Grid column -->
+    
+            </div>
+            <!-- Grid row -->
+    
+          </div>
+          <!-- Small news -->
+
+          <!-- Small news -->
+          <div class="single-news">
+          
+            <!-- Grid row -->
+            <div class="row">
+          
+              <!-- Grid column -->
+              <div class="col-md-9">
+          
+                <!-- Excerpt -->
+                <p class="font-weight-bold dark-grey-text">Page Details</p>
+                <div class="d-flex justify-content-between">
+                  <div class="col-11 text-truncate pl-0 mb-3">
+                    
+                    <a routerLink="/launchpad/{{ launchpad.id }}" class="dark-grey-text">
+                      <button class="btn btn-outline-info waves-effect waves-light">View more</button>
+                    </a>
+                  </div>
+                </div>
+          
+              </div>
+              <!-- Grid column -->
+          
+            </div>
+            <!-- Grid row -->
+          
+          </div>
+          <!-- Small news -->
+        </div>
+        <!-- Grid column -->
+      </div>
+      <!-- Grid row -->
+      <div class="text-center">
+        <pagination-controls (pageChange)="p = $event"></pagination-controls>
+      </div>
+    </section>
+  </div>
+</main>

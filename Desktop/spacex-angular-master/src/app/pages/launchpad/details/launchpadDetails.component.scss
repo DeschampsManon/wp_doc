@@ -1,0 +1,30 @@
+.badge-pill.retired {
+  border-left: 7px solid #ff4444;
+  color: #ff4444 !important;
+}
+
+.badge-pill.active {
+  border-left: 7px solid #00C851;
+  color: #00C851 !important;
+}
+
+.badge-pill.destroyed {
+  border-left: 7px solid #CC0000;
+  color: #CC0000 !important;
+}
+
+.badge-pill.unknown {
+  border-left: 7px solid #000;
+  color : #000 !important;
+}
+.single-news {
+  border-bottom: 1px solid #8080801a;
+}
+
+.single-news:last-child {
+  border-bottom: unset;
+}
+
+.pad{
+  margin-bottom: 3%;
+}

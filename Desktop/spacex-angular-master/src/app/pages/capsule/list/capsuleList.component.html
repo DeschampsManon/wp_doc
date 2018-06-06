@@ -1,0 +1,70 @@
+<main>
+  <div class="container">
+    <section class="my-5">
+
+      <!-- Section heading -->
+      <h2 class="h1-responsive font-weight-bold text-center my-5">Details of ours capsules</h2>
+      <!-- Section description -->
+      <p class="text-center dark-grey-text w-responsive mx-auto mb-5">You can find here a lot of details of ours capsules.</p>
+
+      <!-- Grid row -->
+      <div class="row" *ngFor="let capsule of capsules">
+          <!-- Grid column -->
+          <div class="col-lg-5 col-xl-4">
+            <!-- Featured image -->
+            <div class="view overlay rounded z-depth-1-half mb-lg-0 mb-4">
+              <img class="img-fluid" src="assets/capsuladata.png" alt="Sample image">
+              <a>
+                <div class="mask rgba-white-slight"></div>
+              </a>
+            </div>
+          
+          </div>
+          <!-- Grid column -->
+          
+          <!-- Grid column -->
+          <div class="col-lg-7 col-xl-8">
+          
+            <!-- Post title -->
+            <h3 class="mb-3">
+              Name of capsule : <strong class="font-weight-bold blue-text">{{ capsule.name }}</strong>
+            </h3>
+            <!-- Excerpt -->
+            <p class="dark-grey-text">
+              {{ capsule.description }}
+            </p>
+            <!-- Post data -->
+            <p>Material used :
+              <a class="font-weight-bold">{{ capsule.heat_shield.material }}</a>
+            </p>
+            <p>Dev partner :
+              <a class="font-weight-bold">{{ capsule.heat_shield.dev_partner }}</a>
+            </p>
+            <p>Thrusters :
+              <span *ngFor="let thrusters of capsule.thrusters">
+                <span class="badge badge-pill light-blue">{{ thrusters.type }}</span>&nbsp;
+              </span>
+            </p>
+            <p>
+              <span *ngFor="let thrusters of capsule.thrusters">
+                <p>Fuels used by {{ thrusters.type }} :</p>
+                <span class="badge badge-pill green">{{ thrusters.fuel_1 }}</span> &nbsp;
+                <span class="badge badge-pill green">{{ thrusters.fuel_2 }}</span>
+                <br>
+              </span>
+            </p>
+            <p>
+              Weight :
+              <a class="font-weight-bold">{{ capsule.launch_payload_mass.kg }} kgs</a>
+            </p>
+            <p>
+              Diameter :
+              <a class="font-weight-bold">{{ capsule.diameter.meters }} meters</a> and <a class="font-weight-bold">{{ capsule.diameter.feet }} feet</a>
+            </p>
+          </div>
+          <!-- Grid column -->
+        </div>
+        <!-- Grid row -->
+    </section>
+  </div>
+</main>

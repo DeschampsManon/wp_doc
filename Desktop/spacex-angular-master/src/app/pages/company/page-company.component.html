@@ -1,0 +1,127 @@
+<main>
+  <div class="container">
+    <section class="my-5">
+      <!-- Section heading -->
+      <h2 class="h1-responsive font-weight-bold text-center my-5">{{ infos.name }}</h2>
+      <!-- Section description -->
+      <p class="grey-text text-center w-responsive mx-auto mb-5">
+         {{ infos.summary }}
+      </p>
+
+      <!-- Grid row -->
+      <div class="row">
+
+        <!-- Grid column -->
+        <div class="col-lg-5 mb-lg-0 mb-5">
+          <!--Image-->
+          <img src="assets/founded.jpg" alt="Sample project image" class="img-fluid rounded z-depth-1">
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-lg-7">
+
+          <!-- Grid row -->
+          <div class="row">
+            <div class="col-md-1 col-2">
+              <i class="fa fa-university fa-2x yelIc"></i>
+            </div>
+            <div class="col-md-11 col-10">
+              <h5 class="font-weight-bold mb-3">Founder</h5>
+              <p class="grey-text mb-0">
+                In fact, Space X was founded by
+                <strong>{{ infos.founder }}</strong>.
+              </p>
+            </div>
+          </div>
+          <!-- Grid row -->
+          <br><br>
+          <!-- Grid row -->
+          <div class="row mb-3">
+            <div class="col-md-1 col-2">
+              <i class="fa fa-user fa-2x yelIc"></i>
+            </div>
+            <div class="col-md-11 col-10">
+              <h5 class="font-weight-bold mb-3">CEO</h5>
+              <p class="grey-text">
+                Actually, our CEO is <strong>{{ infos.ceo }}</strong>.
+              </p>
+            </div>
+          </div>
+          <!-- Grid row -->
+          <br>
+          <!-- Grid row -->
+          <div class="row mb-3">
+            <div class="col-md-1 col-2">
+              <i class="fa fa-handshake-o fa-2x yelIc"></i>
+            </div>
+            <div class="col-md-11 col-10">
+              <h5 class="font-weight-bold mb-3">CTO</h5>
+              <p class="grey-text">
+                Our CEO works with this CTO. His name's <strong>{{ infos.cto }}</strong>.
+              </p>
+            </div>
+          </div>
+          <!-- Grid row -->
+
+        </div>
+        <!-- Grid column -->
+
+      </div>
+      <!-- Grid row -->
+    </section>
+    <hr class="my-5">
+    <section class="my-5">
+      <div class="col-md-12 text-center">
+        <h2 class="h1-responsive font-weight-bold text-center my-5">Other Details</h2>
+      </div>
+      <div class="col-md-12">
+        <div class="col-md-4 text-center dis">
+          <div class="countR">
+            <h3>Employees</h3>
+            <span class="badge badge-pill purple">
+              <i class="fa fa-users fa-2x p-3" aria-hidden="true"></i><br>
+              {{ infos.employees }}
+            </span>
+          </div>
+        </div>
+        <div class="col-md-4 text-center dis">
+          <div class="countR">
+            <h3>Vehicles</h3>
+            <span class="badge badge-pill amber">
+              <i class="fa fa-rocket fa-2x p-3" aria-hidden="true"></i><br>
+              {{ infos.vehicles }}
+            </span>
+          </div>
+        </div>
+        <div class="col-md-4 text-center dis">
+          <div class="countR">
+            <h3>Launch Sites</h3>
+            <span class="badge badge-pill red">
+              <i class="fa fa-fighter-jet fa-2x p-3" aria-hidden="true"></i><br>
+              {{ infos.launch_sites }}
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <hr class="my-5">
+    <section class="my-5">
+      <div id="map-container-2" class="z-depth-1" style="height: 500px"></div>
+        <div class="col-md-12 text-center listOfAd">
+          <div class="col-md-4 align-middle">
+            <i class="fa fa-map-signs fa-2x yelIc"></i>
+            <p>{{ infos.headquarters.address }}</p>
+          </div>
+          <div class="col-md-4 align-middle">
+            <i class="fa fa-home fa-2x yelIc"></i>
+            <p>{{ infos.headquarters.city }}</p>
+          </div>
+          <div class="col-md-4 align-middle">
+            <i class="fa fa-paper-plane fa-2x yelIc"></i>
+            <p class="mb-0">{{ infos.headquarters.state }}</p>
+          </div>
+      </div>
+    </section>
+  </div>
+</main>

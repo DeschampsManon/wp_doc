@@ -1,0 +1,25 @@
+.dis{
+  display: inline-flex;
+  .card{
+    min-height: 100%;
+  }
+  .blue-gradient {
+    background: -webkit-linear-gradient(50deg, #45cafc, #303f9f) !important;
+    background: -o-linear-gradient(50deg, #45cafc, #303f9f) !important;
+    background: linear-gradient(40deg, #45cafc, #303f9f) !important;
+  }
+
+  .card.card-cascade .view {
+    -webkit-box-shadow: 0 5px 11px 0 rgba(0, 0, 0, .18), 0 4px 15px 0 rgba(0, 0, 0, .15);
+    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, .18), 0 4px 15px 0 rgba(0, 0, 0, .15);
+    -webkit-border-radius: .25rem;
+    border-radius: .25rem;
+  }
+
+  .card.card-cascade .view.gradient-card-header {
+    padding: 1.6rem 1rem;
+    text-align: center;
+    color: #fff;
+  }
+
+}
